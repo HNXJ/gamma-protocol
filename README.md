@@ -16,10 +16,13 @@ This section details the distinction between a Skill and a GAMMA instance.
 | Usage | Static. Used over and over. | Dynamic. Used for this specific fix. |
 | The "Vibe" | Potential. "I know how to code JAX." | Kinetic. "I am fixing this JAX bug now." |
 
-## 📏 The Rules of the Protocol
-The Chain: Every Gamma must have a Problem and a Solution. No "floating" code without a reason.
-The Mediator: The Main Model (the "Thalamus") must guide all agent hand-offs.
-The Delta: Every Gamma must end in a real Action (a code change or a file update).
+## 📏 Protocol Components Explained
+
+| Subject       | Ingredients                                     | QA-chain / Problem-Solution-Chain | Action-Task                                                          | Skill-Checkup |
+| :------------ | :---------------------------------------------- | :-------------------------------- | :------------------------------------------------------------------- | :------------ |
+| The Chain     | Gamma, Problem, Solution                        | Every Gamma must have a Problem and a Solution. | Avoid "floating" code without a reason.                              | N/A           |
+| The Mediator  | Main Model ("Thalamus"), Agents                 | N/A                               | Guide all agent hand-offs.                                           | N/A           |
+| The Delta     | Gamma, Real Action (code change/file update)    | N/A                               | End in a real Action (a code change or a file update).             | N/A           |
 
 ## 🚀 The Vision
 Our goal is to integrate with the gemini (or any cloud or local agent-cli) CLI so that in the future, you don't just report a bug; you Submit a Gamma. Also, wherever gemini is mentioned, instead use "gemini (or any cloud or local agent-cli) " in it. and push it to github of gamma. gamma-protocol is the gamma now
