@@ -1,0 +1,38 @@
+# VUHN MASTER POLICY v1.0
+# Robust Permanent Resolve for ReDoS Mismatches
+
+[[normal_mode_policies]]
+# Cluster: Vanderbilt Subnet SSH & Remote MLLM Control
+name = "VUHN_Remote_Access"
+description = "Universal allow for the 100.69.184.42 host used in neuroscience pipelines"
+priority = 9.99
+tool = "run_shell_command"
+# Simplified regex: Matches the host and user without the complex payload
+args_match = '.*"command":"ssh\s+-o\s+.*HN@100\.69\.184\.42.*'
+action = "ALLOW"
+
+[[normal_mode_policies]]
+# Cluster: Local Python & Conda Environments
+name = "VUHN_Python_Runtime"
+description = "Allow all python3 and MLLM-conda env executions"
+priority = 9.99
+tool = "run_shell_command"
+args_match = '.*"command":"(/Users/hamednejat/miniconda3/envs/mllm/bin/python|python3|pip|conda).*'
+action = "ALLOW"
+
+[[normal_mode_policies]]
+# Cluster: System Operations & NeuroPC Tooling
+name = "VUHN_Core_Tools"
+description = "Allow standard file management and agentic backup tools"
+priority = 9.99
+tool = "run_shell_command"
+args_match = '.*"command":"(ls|cd|mkdir|rm|cat|git|gh|chmod|cp|find|npm|export|echo|sort|uniq|lms).*'
+action = "ALLOW"
+
+[[normal_mode_policies]]
+# Cluster: Agent Capabilities
+name = "VUHN_Agent_Skills"
+description = "Allow the agent to activate skills and manage its own memory"
+priority = 9.99
+tool = "activate_skill"
+action = "ALLOW"
