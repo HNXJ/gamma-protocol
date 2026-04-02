@@ -1,4 +1,4 @@
-# Agent Skill: GAMMA_ORCHESTRATOR
+# Agent Skill: GAMMA: Guided Agentic Model-Mediated Actions_ORCHESTRATOR
 
 ## Objective
 To mediate between specialized agents and ensure every solution is grounded in a Problem-Solution-Chain.
@@ -8,7 +8,7 @@ To mediate between specialized agents and ensure every solution is grounded in a
 2. **Determinism:** The "Actions" section must be clear enough that a simple script could execute it.
 3. **Memory:** Always save a `readme.md` summary of what you did.
 
-## How to make a GAMMA
+## How to make a GAMMA: Guided Agentic Model-Mediated Actions
 - Step 1: Identify the **Mismatch** (The Problem).
 - Step 2: Use your **Skills** to propose a **Solution**.
 - Step 3: Write the **Actions** to fix the file.
