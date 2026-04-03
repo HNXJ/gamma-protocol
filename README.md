@@ -1,7 +1,7 @@
 GAMMA Protocol: Guided Agentic Model-Mediated Actions
 
 ## 🤖 For Agents
-If you are an LLM-based agent (e.g., Ivan, Joule, or Gemini) contributing to this repository, follow these navigation rules:
+If you are an LLM-based agent contributing to this repository, follow these navigation rules:
 1. **Context Layer (`context/`)**: Load immutable project facts, datasets, and environmental constraints from this directory before acting.
 2. **Reasoning Layer (`chains/`)**: Document every problem-solution chain (PSC) as a Markdown file here to prevent reasoning drift and redundant errors.
 3. **Action Layer (`tasks/`)**: Synchronize with `tasks.json` to self-assign and update the progress of active research or development goals.
