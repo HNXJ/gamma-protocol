@@ -12,7 +12,7 @@ This protocol mandates high-fidelity agentic action traces. Always maintain stri
 | :--- | :--- | :--- |
 | **Nature** | **Potential & Static**: A reusable "How-To" guide or capability definition. | **Kinetic & Active**: A specific, verifiable trace of a real-world architectural delta. |
 | **Persistence** | **Permanent Knowledge**: Once registered, it resides in the agent's core toolbox for future use. | **Episodic Action**: Documents a single session's fix or implementation; it is a live history. |
-| **Dependency** | **Standalone Capability**: Defines a tool or pattern (e.g., "how to parse LaTeX"). | **Mandatory Requirement**: If a GAMMA mentions a Skill, it **requires** its use rather than suggesting it. |
+| **Dependency** | **Standalone Capability**: Defines a tool or pattern (e.g., "how to parse LaTeX"). | **Mandatory Requirement**: If a GAMMA mentions a Skill, it **requires** its use. Otherwise explains the how-to part of it |
 | **Objective** | **Enabling**: Focuses on increasing the agent's theoretical capacity. | **Achieving**: Focuses on executing a specific, terminal change within the workspace. |
 | **Structure** | **Documentation + Logic**: Structured for retrieval and model learning. | **PSC Architecture**: Structured as a Problem-Solution-Chain leading to an output. |
 
