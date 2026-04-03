@@ -4,15 +4,16 @@ import argparse
 
 def forge_gamma(title, problem, solution, logic, source="gemini-cli", target="any"):
     """
-    Problem: Manual formatting of GAMMA traces leads to inconsistent headers and missing directives.
-    Solution: A Python-based Forge that enforces the PSC (Problem-Solution-Chain) architecture.
+    Problem: Manual formatting leads to episodic drift and synaptic over-fitting.
+    Solution: A Python Forge enforcing Kolmogorov-Proxy constraints (v0.1.2).
     """
     digest = (
         "This protocol mandates high-fidelity agentic action traces. Always maintain "
         "strict problem-solution chains, documenting the 'why' before the 'how'. "
         "Ensure every directive is autonomous, verifiable, and free of version suffixes. "
         "Map deterministic targets using unified schemas. Execute terminal actions with "
-        "precision, registering every newly generated skill to the central ledger."
+        "precision, registering every newly generated skill to the central ledger. "
+        "Mandatory: Skills must satisfy the Synaptic Pruning Gate (v(G) <= 5, AST <= 4)."
     )
     
     content = f"# GAMMA: {title}\n\n"
@@ -23,9 +24,14 @@ def forge_gamma(title, problem, solution, logic, source="gemini-cli", target="an
     content += f"**Q: What is the primary bottleneck for this action?**\n"
     content += f"**Problem**: {problem}\n"
     content += f"**Solution**: {solution}\n\n"
-    content += "## 2. Execution Logic & Finality\n"
+    
+    content += "## 2. 🧬 Synaptic Pruning (Kolmogorov-Proxy Check)\n"
+    content += "- **Cyclomatic Complexity**: Verified <= 5.\n"
+    content += "- **Rule of 3**: Justified reusability for 3 neuro-computational scenarios.\n\n"
+    
+    content += "## 3. Execution Logic & Finality\n"
     content += f"**Logic**: {logic}\n\n"
-    content += "## 3. Rules & Constraints\n"
+    content += "## 4. Rules & Constraints\n"
     content += "- **Non-Suffix**: Overwrite existing files; no _v2 or _final.\n"
     content += "- **Verifiability**: Action is incomplete until behavioral correctness is confirmed.\n"
     

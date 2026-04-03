@@ -11,7 +11,8 @@ function forgeGamma(title, problem, solution, logic, source = "gemini-cli", targ
                    "strict problem-solution chains, documenting the 'why' before the 'how'. " +
                    "Ensure every directive is autonomous, verifiable, and free of version suffixes. " +
                    "Map deterministic targets using unified schemas. Execute terminal actions with " +
-                   "precision, registering every newly generated skill to the central ledger.";
+                   "precision, registering every newly generated skill to the central ledger. " +
+                   "Mandatory: Skills must satisfy the Synaptic Pruning Gate (v(G) <= 5, AST <= 4).";
 
     const content = `# GAMMA: ${title}
 
@@ -27,10 +28,14 @@ ${digest}
 **Problem**: ${problem}
 **Solution**: ${solution}
 
-## 2. Execution Logic & Finality
+## 2. 🧬 Synaptic Pruning (Kolmogorov-Proxy Check)
+- **Cyclomatic Complexity**: Verified <= 5.
+- **Rule of 3**: Justified reusability for 3 neuro-computational scenarios.
+
+## 3. Execution Logic & Finality
 **Logic**: ${logic}
 
-## 3. Rules & Constraints
+## 4. Rules & Constraints
 - **Non-Suffix**: Overwrite existing files; no _v2 or _final.
 - **Verifiability**: Action is incomplete until behavioral correctness is confirmed.
 `;

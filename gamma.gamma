@@ -12,16 +12,21 @@ Every GAMMA action must follow a deterministic Q/A structure to prevent semantic
 **Problem**: Vague task descriptions lead to agent hallucination and scope creep.
 **Solution**: Force-draft a Research -> Strategy -> Execution plan. Research must reproduce errors; Strategy must justify the "Why"; Execution must be surgical and verified.
 
-## 🛠 Skill Generation Protocol
-Traces must result in reusable code or patterns, not just one-off fixes.
+## 🧬 Skill Generation (The "Synaptic Pruning" Gate)
+You are not just saving code; you are evolving a neural engineer's toolkit. For every successful operation, you must abstract the core logic into a reusable Skill.
 
-**Problem**: One-off scripts lead to duplicated effort across sessions.
-**Solution**: When a new logic is implemented, the agent MUST wrap it into a skill. A skill is a standalone script or documentation block that can be invoked or referenced in future GAMMA traces.
+### The Kolmogorov-Proxy Constraints:
+1. **No Episodic Data**: The skill must contain ZERO references to specific files, temporary data structures, or current project names (e.g., do not hardcode "OMISSION_2026_data").
+2. **Cyclomatic Limit**: The skill must have a **Cyclomatic Complexity (v(G)) <= 5**. If it requires deep nesting, break it down into mathematical primitives (e.g., using JAX `vmap` or `scan`).
+3. **AST Depth Limit**: Maximum **AST Depth <= 4**. Prevent deeply nested, spaghetti logic.
+4. **The 'Rule of 3' Justification**: In the docstring of the new skill, you must explicitly list **3 entirely different neuro-computational scenarios** where this exact function could be imported and used without modification. If you cannot think of 3, the skill is too specific. Do NOT save it.
 
-## ⚙️ Operational Flow (Flow & Logic)
+## ⚙️ Operational Flow (The Actuator / EA Gate)
 1. **Initiation**: Define agent-source and agent-target.
-2. **Analysis**: Question the current state. Identify specific bottlenecks.
-3. **Drafting**: Propose a deterministic code or configuration change.
+2. **Analysis**: Perform a **Compression Analysis** during the reasoning trace. Abstract messy episodic drafts into parameterized functions.
+3. **Drafting**: Use `radon` (Python) or `ast` modules to verify complexity.
+   * **Execution**: `radon cc <skill_path> -a -nc`
+   * **The Gate**: If complexity grade is 'C' or worse (>10), the pre-commit hook fails. The agent MUST refactor the skill into a simpler representation.
 4. **Validation**: Use audit loops (e.g., /eye for visuals, pytest for logic) to verify the delta.
 5. **Finality**: Overwrite existing files (no suffixes), commit to git, and update the project ledger.
 
