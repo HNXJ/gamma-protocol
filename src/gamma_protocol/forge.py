@@ -34,7 +34,7 @@ def forge_gamma(title, problem, solution, logic, source="gemini-cli", target="an
         f.write(content)
     print(f"🔥 Successfully forged: {filename}")
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Forge a standardized GAMMA trace.")
     parser.add_argument("--title", required=True)
     parser.add_argument("--problem", required=True)
@@ -42,3 +42,4 @@ if __name__ == "__main__":
     parser.add_argument("--logic", required=True)
     args = parser.parse_args()
     forge_gamma(args.title, args.problem, args.solution, args.logic)
+\nif __name__ == "__main__":\n    main()

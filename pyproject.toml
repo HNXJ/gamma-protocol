@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gamma-protocol"
+version = "0.1.1"
+description = "Standardized Guided Agentic Model-Mediated Actions (GAMMA) Forge Utility"
+readme = "readme.md"
+requires-python = ">=3.7"
+license = { text = "UNLICENSED" }
+authors = [
+    { name = "HNXJ" }
+]
+keywords = [
+    "gamma",
+    "agentic",
+    "protocol",
+    "psc",
+    "gemini",
+    "mllm"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/HNXJ/gamma-protocol"
+Issues = "https://github.com/HNXJ/gamma-protocol/issues"
+
+[project.scripts]
+gamma-forge-py = "gamma_protocol.forge:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gamma_protocol"]
