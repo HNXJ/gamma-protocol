@@ -6,6 +6,16 @@
 ## 🤖 For Agents
 This protocol mandates high-fidelity agentic action traces. Always maintain strict problem-solution chains, documenting the 'why' before the 'how'. Ensure every directive is autonomous, verifiable, and free of version suffixes. Map deterministic targets using unified schemas. Execute terminal actions with precision, registering every newly generated skill to the central ledger.
 
+### 🧬 Skill vs. GAMMA: The Operational Distinction
+
+| Feature | The Skill (e.g., `skills/`) | The GAMMA (e.g., `gamma.gamma`) |
+| :--- | :--- | :--- |
+| **Nature** | **Potential & Static**: A reusable "How-To" guide or capability definition. | **Kinetic & Active**: A specific, verifiable trace of a real-world architectural delta. |
+| **Persistence** | **Permanent Knowledge**: Once registered, it resides in the agent's core toolbox for future use. | **Episodic Action**: Documents a single session's fix or implementation; it is a live history. |
+| **Dependency** | **Standalone Capability**: Defines a tool or pattern (e.g., "how to parse LaTeX"). | **Mandatory Requirement**: If a GAMMA mentions a Skill, it **requires** its use rather than suggesting it. |
+| **Objective** | **Enabling**: Focuses on increasing the agent's theoretical capacity. | **Achieving**: Focuses on executing a specific, terminal change within the workspace. |
+| **Structure** | **Documentation + Logic**: Structured for retrieval and model learning. | **PSC Architecture**: Structured as a Problem-Solution-Chain leading to a Git commit. |
+
 ## 1. Problem-Solution Architecture (The "Why")
 
 **Q: Why do agents often lose context or fail during multi-step tasks?**
