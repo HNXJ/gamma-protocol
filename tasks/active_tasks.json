@@ -1,25 +1,19 @@
 {
-  "active_projects": [
+  "protocol": "GAMMA",
+  "version": "1.0.0",
+  "agent-source": "any",
+  "agent-target": "any",
+  "for-agent-digest": "This protocol mandates high-fidelity agentic action traces. Always maintain strict problem-solution chains, documenting the 'why' before the 'how'. Ensure every directive is autonomous, verifiable, and free of version suffixes. Map deterministic targets using unified schemas. Execute terminal actions with precision, registering every newly generated skill to the central ledger.",
+  "tasks": [
     {
-      "id": "OMISSION-2026",
-      "status": "researching",
-      "priority": "P1",
-      "assigned_agent": "Gemini",
-      "subtasks": [
-        "Initialize Gamma Protocol Layers",
-        "Define Pre-Flight Analysis Protocol",
-        "Implement Post-Flight Git Sync"
-      ]
-    },
-    {
-      "id": "MLLM-PIPELINE",
-      "status": "evaluating",
-      "priority": "P1",
-      "assigned_agent": "MLLM-Orchestrator",
-      "subtasks": [
-        "Standardize unified prompt logic",
-        "Implement TPS speed logging",
-        "Restore monitor Reasoning/Score tabs"
+      "id": "T001",
+      "status": "active",
+      "problem": "Manual tracking of active tasks is inconsistent across sessions.",
+      "solution": "Implement a centralized JSON-based task ledger that agents must update as part of their 'Finality' step in every GAMMA trace.",
+      "active_objectives": [
+        "Standardize GAMMA Protocol documentation.",
+        "Implement real-time CSV evaluation logging (Nemotron).",
+        "Upgrade Gravia to use arXiv-compliant manuscript templates."
       ]
     }
   ]
