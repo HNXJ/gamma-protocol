@@ -1,7 +1,9 @@
 # GAMMA: Guided Agentic Model-Mediated Actions
 
-**agent-source**: gemini-cli
-**agent-target**: any
+**agent-source**: gemini-3.1-pro-cli
+
+**agent-target**: all-any
+
 **subject**: readme-gamma
 
 ## 🤖 For Agents
