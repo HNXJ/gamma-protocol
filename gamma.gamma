@@ -1,28 +1,31 @@
-GAMMA: Guided Agentic Model-Mediated Actions
+# GAMMA: Guided Agentic Model-Mediated Actions
 
-Welcome to the GAMMA Protocol.
+**agent-source**: any
+**agent-target**: any
 
-## 🧬 What is GAMMA?
-GAMMA is a standard for Cognitive Synchrony in AI agents. Instead of simple chat logs, GAMMA produces Guided Actions—standardized traces that help multiple AI agents (like a Visual Engine and a Programming Agent) work together without losing track of the goal.
+## 🧠 Core Agent Directive
+This protocol mandates high-fidelity agentic action traces. Always maintain strict problem-solution chains, documenting the 'why' before the 'how'. Ensure every directive is autonomous, verifiable, and free of version suffixes. Map deterministic targets using unified schemas. Execute terminal actions with precision, registering every newly generated skill to the central ledger.
 
-## 🛠 Skills vs. GAMMA
-This section details the distinction between a Skill and a GAMMA instance.
+## ⚖️ The Problem-Solution Chain (PSC)
+Every GAMMA action must follow a deterministic Q/A structure to prevent semantic drift.
 
-| Feature | The Skill (.skill) | The GAMMA (.gamma) |
-|---|---|---|
-| What is it? | A How-To Guide. | A Live Action Trace. |
-| Math Analogy | Like a Formula ($a^2 + b^2 = c^2$). | Like the Step-by-Step Work on a test. |
-| Who uses it? | The Model (to learn the rules). | The Model (to keep agents in sync). |
-| Usage | Static. Used over and over. | Dynamic. Used for this specific fix. |
-| The "Vibe" | Potential. "I know how to code JAX." | Kinetic. "I am fixing this JAX bug now." |
+**Problem**: Vague task descriptions lead to agent hallucination and scope creep.
+**Solution**: Force-draft a Research -> Strategy -> Execution plan. Research must reproduce errors; Strategy must justify the "Why"; Execution must be surgical and verified.
 
-## 📏 Protocol Components Explained
+## 🛠 Skill Generation Protocol
+Traces must result in reusable code or patterns, not just one-off fixes.
 
-| Subject       | Ingredients                                     | QA-chain / Problem-Solution-Chain | Action-Task                                                          | Skill-Checkup |
-| :------------ | :---------------------------------------------- | :-------------------------------- | :------------------------------------------------------------------- | :------------ |
-| The Chain     | Gamma, Problem, Solution                        | Every Gamma must have a Problem and a Solution. | Avoid "floating" code without a reason.                              | N/A           |
-| The Mediator  | Main Model ("Thalamus"), Agents                 | N/A                               | Guide all agent hand-offs.                                           | N/A           |
-| The Delta     | Gamma, Real Action (code change/file update)    | N/A                               | End in a real Action (a code change or a file update).             | N/A           |
+**Problem**: One-off scripts lead to duplicated effort across sessions.
+**Solution**: When a new logic is implemented, the agent MUST wrap it into a skill. A skill is a standalone script or documentation block that can be invoked or referenced in future GAMMA traces.
 
-## 🚀 The Vision
-Our goal is to integrate with the gemini (or any cloud or local agent-cli) CLI so that in the future, you don't just report a bug; you Submit a Gamma. Also, wherever gemini is mentioned, instead use "gemini (or any cloud or local agent-cli) " in it. and push it to github of gamma. gamma-protocol is the gamma now
+## ⚙️ Operational Flow (Flow & Logic)
+1. **Initiation**: Define agent-source and agent-target.
+2. **Analysis**: Question the current state. Identify specific bottlenecks.
+3. **Drafting**: Propose a deterministic code or configuration change.
+4. **Validation**: Use audit loops (e.g., /eye for visuals, pytest for logic) to verify the delta.
+5. **Finality**: Overwrite existing files (no suffixes), commit to git, and update the project ledger.
+
+## 📜 Constraints & Rules
+- **Non-Suffix**: No `_v2`, `_new`, `_final`. Always overwrite.
+- **Portability**: No absolute paths. Resolve paths dynamically.
+- **Verifiability**: An action is not complete until its behavioral correctness is verified through automated tests or visual audit.
