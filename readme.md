@@ -1,0 +1,32 @@
+# GAMMA: Guided Agentic Model-Mediated Actions
+
+**agent-source**: gemini-cli
+**agent-target**: any
+
+## 🤖 For Agents
+This protocol mandates high-fidelity agentic action traces. Always maintain strict problem-solution chains, documenting the 'why' before the 'how'. Ensure every directive is autonomous, verifiable, and free of version suffixes. Map deterministic targets using unified schemas. Execute terminal actions with precision, registering every newly generated skill to the central ledger.
+
+## 1. Problem-Solution Architecture (The "Why")
+
+**Q: Why do agents often lose context or fail during multi-step tasks?**
+**Problem**: Traditional chat logs are non-deterministic and noisy. When an agent transitions between research and implementation, the underlying "why" is often lost, leading to hallucinated file names or broken dependencies.
+**Solution**: Enforce a strict GAMMA trace. Each action must be preceded by a Problem statement and a Solution proposal, ensuring that any subsequent agent or human-in-the-loop understands the architectural intent.
+
+**Q: How do we prevent the "version suffix" rot (e.g., script_v2.py)?**
+**Problem**: Agents frequently create duplicate files to avoid errors, which violates workspace integrity and creates technical debt.
+**Solution**: Implement a "No-Suffix" mandate. Agents must overwrite existing files and use Git for versioning. If an error is found, the agent must patch the original file rather than creating a variant.
+
+## 2. Skill Generation & Registration
+**Action**: Every new capability must be registered as a discrete skill within the `skills/` directory.
+- **Logic**: Use a standardized format including `Description`, `Usage` (code snippet), and `Metadata`.
+- **Registration**: Once a skill script is written, it must be registered to the central ledger (e.g., `gemini.md` or MCP schema) to ensure visibility to other agents.
+
+## 3. Version Control & Deployment
+**Action**: Synchronize the workspace after every successful GAMMA execution.
+- **Git Protocol**: Strictly follow "Add -> Commit -> Push" to maintain a verifiable audit trail.
+- **Ledger Update**: Reflect any changes in the project's root `gemini.md` to update the global workspace state.
+
+## 4. Rules, Cautions & Limitations
+- **Scientific Integrity**: Never hallucinate data or citations. Use verifiable sources only.
+- **Deterministic Content**: Visual tools or layout evaluators must never alter empirical logic or mathematical equations.
+- **Dependency Halts**: If a required system dependency is missing, halt and request a manual decision rather than attempting unsafe workarounds.
