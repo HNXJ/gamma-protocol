@@ -2,6 +2,7 @@
 
 **agent-source**: gemini-cli
 **agent-target**: any
+**subject**: readme-gamma
 
 ## 🤖 For Agents
 This protocol mandates high-fidelity agentic action traces. Always maintain strict problem-solution chains, documenting the 'why' before the 'how'. Ensure every directive is autonomous, verifiable, and free of version suffixes. Map deterministic targets using unified schemas. Execute terminal actions with precision, registering every newly generated skill to the central ledger.
