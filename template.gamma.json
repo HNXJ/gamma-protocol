@@ -1,0 +1,27 @@
+{
+  "gamma_version": "1.0.0",
+  "meta": {
+    "project": "OMISSION-2026",
+    "agent_id": "gemini-opus-3.5",
+    "trace_id": "gamma-260402-001"
+  },
+  "layers": {
+    "context": {
+      "immutable_facts": ["./context/environment.md", "./context/datasets.md"],
+      "active_theory": "HPC-36-Ontology"
+    },
+    "reasoning": {
+      "problem_statement": "Implement differential oscillation gain in JAXley",
+      "psc_chain": "./chains/jaxley_gain_refactor.md",
+      "status": "in-progress"
+    },
+    "action": {
+      "tasks": "./tasks/active_tasks.json",
+      "git_remote": "https://github.com/hnxj/gamma-protocol.git"
+    },
+    "growth": {
+      "new_skills": ["./skills/jax_oscillation_helper.py"],
+      "extraction_status": "pending"
+    }
+  }
+}
