@@ -1,0 +1,13 @@
+# GAMMA Environment: Office M3 Max & Local macOS
+- **Main Backend**: Office M3 Max (IP: 100.69.184.42, Tailscale).
+- **VRAM Constraint**: 100GB Hard Ceiling.
+- **Python Env**: `~/miniconda3/envs/mllm/bin/python`.
+- **Primary Stack**: MLX (LLMs/VLMs), JAX/Optax (Biophysics).
+- **Core Repositories**:
+    - `mllm`: Reasoning pipeline for doc evaluation.
+    - `jbiophys`: Hierarchical JAX modeling.
+    - `gamma-protocol`: State tracking and action synchronization.
+- **Rules**:
+    - No version suffixes (`_v1`, `_v2`).
+    - Strictly portable relative paths.
+    - Save all infrastructure failures as permanent `debug-` skills.
