@@ -1,0 +1,26 @@
+{
+  "active_projects": [
+    {
+      "id": "OMISSION-2026",
+      "status": "researching",
+      "priority": "P1",
+      "assigned_agent": "Gemini",
+      "subtasks": [
+        "Initialize Gamma Protocol Layers",
+        "Define Pre-Flight Analysis Protocol",
+        "Implement Post-Flight Git Sync"
+      ]
+    },
+    {
+      "id": "MLLM-PIPELINE",
+      "status": "evaluating",
+      "priority": "P1",
+      "assigned_agent": "MLLM-Orchestrator",
+      "subtasks": [
+        "Standardize unified prompt logic",
+        "Implement TPS speed logging",
+        "Restore monitor Reasoning/Score tabs"
+      ]
+    }
+  ]
+}
