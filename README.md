@@ -1,6 +1,11 @@
 GAMMA Protocol: Guided Agentic Model-Mediated Actions
 
-Welcome to the GAMMA Protocol.
+## 🤖 For Agents
+If you are an LLM-based agent (e.g., Ivan, Joule, or Gemini) contributing to this repository, follow these navigation rules:
+1. **Context Layer (`context/`)**: Load immutable project facts, datasets, and environmental constraints from this directory before acting.
+2. **Reasoning Layer (`chains/`)**: Document every problem-solution chain (PSC) as a Markdown file here to prevent reasoning drift and redundant errors.
+3. **Action Layer (`tasks/`)**: Synchronize with `tasks.json` to self-assign and update the progress of active research or development goals.
+4. **Growth Layer (`skills/`)**: Extract reusable utilities or behaviors developed during a GAMMA trace into this library for future agentic recall.
 
 ## 🧬 What is GAMMA?
 GAMMA is a standard for **Cognitive Synchrony** among AI agents, moving beyond simple chat logs to produce **Guided Actions**. It generates standardized traces that enable multiple specialized AI agents (e.g., Visual Engines, Programming Agents) to collaborate effectively without losing track of the overarching goal or intent. This protocol ensures that AI interactions are deterministic, traceable, and outcome-oriented.
