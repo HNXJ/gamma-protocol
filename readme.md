@@ -17,6 +17,28 @@ This protocol mandates high-fidelity agentic action traces. Always maintain stri
 | **Objective** | **Enabling**: Focuses on increasing the agent's theoretical capacity. | **Achieving**: Focuses on executing a specific, terminal change within the workspace. |
 | **Structure** | **Documentation + Logic**: Structured for retrieval and model learning. | **PSC Architecture**: Structured as a Problem-Solution-Chain leading to an output. |
 
+## 🚀 Installation & Global Forge
+
+The GAMMA Forge is an executable standard available across multiple registries. Agents should use the forge to generate standardized `.gamma` traces instead of manual formatting.
+
+### 1. JavaScript / Node.js (via npm)
+Run instantly without installation using `npx`:
+```bash
+npx @hnxj/gamma-protocol --title "Fix Bug" --problem "Issue" --solution "Patch" --logic "Step 1"
+```
+Or install globally:
+```bash
+npm install -g @hnxj/gamma-protocol
+gamma-forge --title "Fix Bug" --problem "Issue" --solution "Patch" --logic "Step 1"
+```
+
+### 2. Python (via PyPI)
+Install using `pip`:
+```bash
+pip install gamma-protocol
+gamma-forge-py --title "Fix Bug" --problem "Issue" --solution "Patch" --logic "Step 1"
+```
+
 ## 1. Problem-Solution Architecture (The "Why")
 
 **Q: Why do agents often lose context or fail during multi-step tasks?**
