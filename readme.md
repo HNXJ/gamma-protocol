@@ -4,7 +4,6 @@
 Gamma is a protocolized scientific discovery game where LLM agents act under bounded harnesses, execute missions, emit receipts, and change truth only through validated backend gates.
 
 ## What Gamma is
-Gamma is evolving into a comprehensive **Scientific Discovery Engine** designed to treat scientific inquiry as a verifiable, reproducible, and gamified process. It bridges the gap between raw agentic exploration and rigorous scientific documentation by enforcing a strict protocol on how agents interact with the world and how their findings are promoted to "truth."
 
 **The Core Concept**:
 > Gamma is the engine. Gamma Protocol is the law. Gamma Arena is the world. Harnesses are equipment. Missions are quests. Receipts are proof.
@@ -17,8 +16,6 @@ The Gamma system is distributed across three primary repositories, each with a d
 
 | Repo | Role | Owns | Must not own |
 | :--- | :--- | :--- | :--- |
-| **gamma** | Backend Engine | Execution, truth, receipts, solver, adapter, persistence, runtime. | UI state, frontend assets, scientific protocol definitions. |
-| **gamma-arena** | Frontend World | Game UI, observer surface, player cards, events, visual dashboards. | Truth logic, backend state, raw scientific logs. |
 | **gamma-protocol** | Protocol Layer | Schemas, harnesses, missions, receipts, doctrine, scientific evaluation contracts. | Live runtime state, UI rendering code, heavy engine logic. |
 
 ## Non-core resource repos
@@ -34,7 +31,6 @@ To maintain system integrity, Gamma operates under a strict four-plane doctrine:
 3. **Truth**: The validated, receipt-backed state committed to the backend.
 4. **Observation**: Reports, visualizations, and UI representations of the state.
 
-**Mandate**: Never confuse proposal, plan, execution result, committed truth, and observation/report.
 
 ## Current truth discipline
 Truth in Gamma is a privileged state:
@@ -61,7 +57,6 @@ A **harness** is a bounded capability contract. It specifies the tools an agent 
 
 - Harnesses may appear as **gear/loadout** in the Gamma Arena UI.
 - The backend and protocol canonical term is always "harness."
-- The UI displays harnesses but does not enforce the truth of their execution.
 - Harness selection is governed by the Control plane.
 
 ### Examples:
@@ -93,7 +88,6 @@ An **Ontology Tournament** is an observation-plane scientific event. In the HPC 
 ↓
 `gamma` executes contracts and commits truth
 ↓
-`gamma-arena` renders committed truth and labeled observation artifacts
 
 ## What must never happen
 - The frontend invents truth.
