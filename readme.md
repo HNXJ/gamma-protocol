@@ -1,119 +1,120 @@
-# Gamma
+# Gamma Protocol
 
-## One-sentence definition
-Gamma is a protocolized scientific discovery game where LLM agents act under bounded harnesses, execute missions, emit receipts, and change truth only through validated backend gates.
+> "Protocol is not truth. Protocol defines how truth may be committed."
 
-## What Gamma is
+## What is Gamma?
 
-**The Core Concept**:
-> Gamma is the engine. Gamma Protocol is the law. Gamma Arena is the world. Harnesses are equipment. Missions are quests. Receipts are proof.
+Gamma is a Scientific Discovery Engine framed as a game.
 
-The core equation of Gamma is:
-**agent identity + harness + mission + validator + receipt + observation**
+The word "game" is intentional. It does not mean trivial or entertainment-only. It means:
 
-## Core repos
-The Gamma system is distributed across three primary repositories, each with a distinct and non-overlapping role:
+- There are rules.
+- There are agents.
+- There are resources.
+- There are missions, levels, events, and tournaments.
+- There are judges.
+- There are state transitions and constraints.
+- There is progression.
+- There is partial information.
+- There are patches.
+- There is no final terminal objective.
 
-| Repo | Role | Owns | Must not own |
-| :--- | :--- | :--- | :--- |
-| **gamma-protocol** | Protocol Layer | Schemas, harnesses, missions, receipts, doctrine, scientific evaluation contracts. | Live runtime state, UI rendering code, heavy engine logic. |
+Gamma is not a single-task benchmark.
 
-## Non-core resource repos
-The following repositories are utilized as resources, tools, or publication surfaces but are not core game-engine components:
-- **glllm-gemdev**: Reference source for MLLM scientific evaluation pipelines.
-- **jbiophysic**: Scientific and biophysical research library.
-- **hnxj.github.io**: Public publishing and observation surface for project visibility.
+Gamma is not a one-shot execution environment.
 
-## Four-plane doctrine
-To maintain system integrity, Gamma operates under a strict four-plane doctrine:
-1. **Control**: Proposal and planning of activities.
-2. **Execution**: The actual performance of tasks by agents within harnesses.
-3. **Truth**: The validated, receipt-backed state committed to the backend.
-4. **Observation**: Reports, visualizations, and UI representations of the state.
+Gamma is an epistemological lifecycle game for continuous scientific discovery.
 
+The goal is not to solve a fixed task.
 
-## Current truth discipline
-Truth in Gamma is a privileged state:
-- Truth is not whatever the UI shows.
-- Truth is not whatever a model says.
-- Truth is not whatever a local artifact claims.
-- Truth requires **validated backend execution and receipts**.
+The goal is to continuously construct, test, revise, validate, and preserve scientific knowledge under ontology constraints.
 
-**Recovery State Note**:
-- Ghost N=12 was invalidated as a smoke-test corruption.
-- Receipt-backed local truth was recovered to N=11.
-- Runtime restart is a separate event from truth recovery.
-- All future truth claims must explicitly cite verifiable receipts.
+## Why gamma-protocol exists
 
-## Player model
-Gamma utilizes a structured participant model:
-- **1 Judge**: The final arbiter of mission success and protocol compliance.
-- **4 Flexible Players**: Agents with distinct identities and capabilities.
+`gamma-protocol` is the law layer of the Gamma ecosystem.
 
-**Players** are persistent identities. **Harnesses** define temporary capability contracts. **Missions** define specific tasks. **Receipts** record the empirical history of what actually occurred.
+It defines rules, protocols, governance, scientific discovery lifecycle, and agent behavior contracts.
 
-## Harnesses
-A **harness** is a bounded capability contract. It specifies the tools an agent can use, the repositories it can access, forbidden side effects, expected output schemas, validation criteria, and receipt requirements.
+It does not contain runtime code, UI code, or truth-bearing execution gates.
 
-- Harnesses may appear as **gear/loadout** in the Gamma Arena UI.
-- The backend and protocol canonical term is always "harness."
-- Harness selection is governed by the Control plane.
+It is the constitution, doctrine, governance manual, and scientific validity contract for the system.
 
-### Examples:
-- **Scientific Evaluation Harness: HPC** (Primary target)
-- **Backend Programmer Harness** (Deferred)
-- **Frontend Observation Harness** (Deferred)
-- **Browser Validation Harness** (Deferred)
+## The Five-Repo Ecosystem
 
-## Scientific Evaluation Harness
-The Scientific Evaluation Harness enables a merged evaluation capability including:
-- Glossary and factors
-- Contexts and study metadata
-- Scoring rules and null vs. zero distinction
-- Prompt provenance and reasoning logs
-- CSV/JSONL/table outputs
-- Validation and observation artifacts
+| Repo | Role |
+|---|---|
+| `gamma` | Backend engine. Runtime, solver, adapter, receipts, truth gates. The timeless kernel. |
+| `gamma-protocol` | **This repo.** Law layer. Doctrine, schemas, missions, harnesses, protocols. |
+| `gamma-arena` | Frontend world. UI, dashboards, observation surfaces. Must never invent truth. |
+| `gamma-science` | Scientific validity. Citations, evidence standards, reference material, reproducibility norms. |
+| `gamma-analysis` | Quantitative methods. Statistics, metrics, algorithms, evaluation pipelines. |
 
-**Constraint**: Scientific evaluation outputs are model-rated evidence maps, not biological truth commits.
+See `core/repo_boundaries.md` for full boundaries.
 
-## Ontology Tournament: HPC
-An **Ontology Tournament** is an observation-plane scientific event. In the HPC tournament, the Council evaluates predictive-processing literature against the HPC ontology.
+## The Four-Plane Architecture
 
-- **Terminology**: ontology-constrained model evaluations, model-rated evidence support, council-scored evidence space.
-- **Classification**: Observation-plane scientific event.
-- **Avoid**: Claims of "proved," "confirmed truth," or "biological truth." Substrate truth remains unchanged by tournament results.
+1. **Control** — missions, rules, governance, proposals
+2. **Execution** — agent runs, simulations, code outputs
+3. **Truth** — receipt-backed, adapter-mediated committed state only
+4. **Observation** — dashboards, UI, reports, public pages
 
-## Minimal architecture
-`gamma-protocol` defines legal contracts
-↓
-`gamma` executes contracts and commits truth
-↓
+**Mandate:** Never confuse proposal, execution result, committed truth, and observation.
 
-## What must never happen
-- The frontend invents truth.
-- The public UI exposes operator controls.
-- Model-rated scores mutate substrate truth.
-- A PASS is declared without simulation execution and validation.
-- Smoke tests write to canonical truth paths.
-- Receipts are bypassed.
-- Stale artifacts are treated as committed state.
+See `core/planes.md` for full definitions.
 
-## Missions
-- **[Continuous Growth (N → N+1)](missions/continuous_growth.md)**: The prime mission for neural substrate expansion.
+## The Hellenic Protocol Stack
 
-## Near-term roadmap
-1. [x] Create [Global Doctrine](GLOBAL_GAMMA.md).
-2. [x] Define [Continuous Growth Mission](missions/continuous_growth.md).
-3. Create minimal harness schema.
+| Protocol | Purpose |
+|---|---|
+| BETA | Read-only audit, grounding, risk discovery |
+| ALPHA | Planning, architecture, task decomposition |
+| GAMMA | Exact execution with manifest, files, commands |
+| DELTA | Conflict resolution, factual drift reconciliation |
+| THETA | Post-execution validation and QA |
+| GAMMA-BURST | One-time major refactor or reconstruction |
 
-## Contributor / agent rules
-- Use cheap agents (e.g., standard models) for grep/search.
-- Use **Claude-cowork** for critique and REVISE/REJECT gates.
-- Use **Claude-code** for scoped high-quality edits.
-- Use **Gemini back agents** for backend truth/receipts/runtime.
-- Use **Antigravity** for frontend/browser validation.
-- Use **GPT-gamma** for prompt orchestration and doctrine.
+See `hellenic/` for full definitions.
 
-## License / status
-**Status**: Active research prototype.
-**License**: See repository license if present.
+## Start Here for Agents
+
+1. Read this README.
+2. Read `core/planes.md` — understand what plane you are touching.
+3. Read `core/repo_boundaries.md` — understand what repo you are in.
+4. Read `agents/permissions.md` — understand your role and allowed actions.
+5. Read the relevant Hellenic protocol for your task type.
+6. Check the GitHub Project board for current missions and blockers.
+7. Never mutate truth without a receipt.
+8. Never write outside your assigned inventory unless explicitly authorized.
+
+## GitHub Project Board
+
+The GitHub Project board is the **central coordination surface**.
+
+Use it for planning, communication, execution tracking, and handoffs.
+
+It is **not** a truth plane. Items on the board are proposals and coordination artifacts.
+
+See `collaboration/github_project.md`.
+
+## What this repo must never contain
+
+- Runtime code (beyond the existing forge utility)
+- UI rendering code
+- API secrets, tokens, private keys, passwords
+- Hardcoded scientific state (current neuron counts, N values, active truth)
+- Binary files or generated images
+- Vague placeholder doctrine ("TODO", "Add more here")
+
+## Critical Warning
+
+Protocol is not truth.
+
+Protocol defines how truth may be committed.
+
+Truth requires validated receipts from the gamma backend.
+
+No dashboard, no project item, no model output, and no protocol file is truth.
+
+---
+
+© 2026 HNXJ(H.Nejat) / BASTOSLAB / / VANDERBILT UNIVERSITY

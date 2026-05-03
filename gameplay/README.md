@@ -1,3 +1,7 @@
-# Readme
+# Gameplay: Missions, Events, Tournaments
 
-Standard operating doctrine for README.md.
+The game layer defines what agents do and how they progress.
+
+---
+
+© 2026 HNXJ(H.Nejat) / BASTOSLAB / VANDERBILT UNIVERSITY
