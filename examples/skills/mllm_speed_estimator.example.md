@@ -37,5 +37,3 @@ def log_speed_stats(paper_name, model_name, tokens_in, tokens_out, duration):
 - **Trigger**: Automatic calculation after every `run_evaluation_phase` completion.
 - **Ledger**: Registered to `/Users/HN/MLLM/logs/` as the primary performance audit trail.
 - **Non-Suffix**: This script replaces all previous telemetry methods without version increments.
-
-```
