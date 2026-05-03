@@ -104,14 +104,13 @@ An **Ontology Tournament** is an observation-plane scientific event. In the HPC 
 - Receipts are bypassed.
 - Stale artifacts are treated as committed state.
 
+## Missions
+- **[Continuous Growth (N → N+1)](missions/continuous_growth.md)**: The prime mission for neural substrate expansion.
+
 ## Near-term roadmap
-1. Create global README.
-2. Create minimal harness schema.
-3. Create Scientific Evaluation HPC harness markdown.
-4. Extract HPC glossary from `glllm-gemdev` into `gamma-protocol`.
-5. Validate harness outputs as CSV/JSONL/Markdown.
-6. Render harnesses as player gear in `gamma-arena`.
-7. Allow `gamma` to execute harnessed scientific evaluation jobs with receipts.
+1. [x] Create [Global Doctrine](GLOBAL_GAMMA.md).
+2. [x] Define [Continuous Growth Mission](missions/continuous_growth.md).
+3. Create minimal harness schema.
 
 ## Contributor / agent rules
 - Use cheap agents (e.g., standard models) for grep/search.
