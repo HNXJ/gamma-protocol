@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GAMMA Harness Schema",
+  "description": "JSON schema for GAMMA execution harnesses. Harnesses are structured task wrappers that define input contracts, execution environments, output contracts, and validation criteria.",
+  "type": "object",
+  "required": ["harness_id", "name", "description", "plane", "protocol", "input_contract", "output_contract", "execution_environment"],
+  "properties": {
+    "harness_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "Unique identifier for the harness (kebab-case)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the harness"
+    },
+    "description": {
+      "type": "string",
+      "description": "Purpose and scope of the harness"
+    },
+    "plane": {
+      "type": "string",
+      "enum": ["Control", "Execution", "Truth", "Observation"],
+      "description": "Which GAMMA plane this harness operates on"
+    },
+    "protocol": {
+      "type": "string",
+      "enum": ["BETA", "ALPHA", "GAMMA", "DELTA", "THETA", "GAMMA-BURST"],
+      "description": "Hellenic protocol governing this harness"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the harness (MAJOR.MINOR.PATCH)"
+    },
+    "author": {
+      "type": "string",
+      "description": "Creator/maintainer of the harness"
+    },
+    "input_contract": {
+      "type": "object",
+      "required": ["required_fields", "optional_fields", "schema"],
+      "properties": {
+        "required_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Fields that must be provided to execute this harness"
+        },
+        "optional_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Fields that may optionally be provided"
+        },
+        "schema": {
+          "type": "object",
+          "description": "JSON schema for input validation"
+        }
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "required": ["output_fields", "schema"],
+      "properties": {
+        "output_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Fields guaranteed to be in output"
+        },
+        "schema": {
+          "type": "object",
+          "description": "JSON schema for output validation"
+        }
+      }
+    },
+    "execution_environment": {
+      "type": "object",
+      "required": ["runtime", "language"],
+      "properties": {
+        "runtime": {
+          "type": "string",
+          "enum": ["python", "bash", "node", "docker"],
+          "description": "Execution runtime for this harness"
+        },
+        "language": {
+          "type": "string",
+          "description": "Programming language of the harness implementation"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Required packages or modules"
+        }
+      }
+    },
+    "validation_criteria": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Criteria that must be satisfied for output to be valid"
+    },
+    "rejection_criteria": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Conditions that cause rejection of output"
+    },
+    "forbidden_actions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Actions explicitly forbidden during harness execution"
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Evidence artifacts that must be produced"
+    },
+    "tags": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Categorization tags (e.g., 'documentation', 'validation', 'reconstruction')"
+    }
+  },
+  "additionalProperties": false
+}
