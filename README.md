@@ -1,7 +1,7 @@
 # Gamma Protocol
 
 ## Role in Gamma Labyrinth
-Markdown-only Control/Doctrine authority. No runtime code, no package logic, no generated artifacts, no live schemas except minimal repo-policy enforcement files.
+Markdown-only Control/Doctrine authority; no runtime code or live schemas.
 
 ## Plane Classification
 Control/Doctrine Plane.
