@@ -1,51 +1,44 @@
-__pycache__/
-*.pyc
-*.pyo
-.DS_Store
-*.egg-info/
-dist/
-build/
-.env
-*.log
-.idea/
-.vscode/
-*.pem
-*.key
-.secrets
-
-# UV
-.uv_cache/
-.uv_python/
-
-# Node
-node_modules/
-dist/
-dist-ssr/
-*.local
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
+# Logs
+# Node
 # OS
-.DS_Store
-.AppleDouble
-.LSOverride
-
 # Python
-.venv/
-venv/
-ENV/
-env/
-.pytest_cache/
+# UV
+*.egg-info/
+*.html
+*.key
+*.local
+*.log
+*.mat
+*.npy
+*.pem
+*.pyc
+*.pyo
+*.swo
+*.swp
+.AppleDouble
+.DS_Store
+.LSOverride
 .coverage
+.env
+.idea/
 .mypy_cache/
+.pytest_cache/
+.secrets
+.uv_cache/
+.uv_python/
+.venv/
+.vscode/
+ENV/
+__pycache__/
+build/
+dist-ssr/
+dist/
+env/
+logs/
+node_modules/
+npm-debug.log*
+venv/
+yarn-debug.log*
+yarn-error.log*
