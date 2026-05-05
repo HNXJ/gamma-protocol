@@ -1,5 +1,25 @@
 # Gamma Protocol
 
+## Role in Gamma Labyrinth
+Markdown-only Control/Doctrine authority. No runtime code, no package logic, no generated artifacts, no live schemas except minimal repo-policy enforcement files.
+
+## Plane Classification
+Control/Doctrine Plane.
+
+## Truth-Safety Note
+`truth_mode: truth_safe_unverified`. This repository defines the rules for truth commitment but does not store scientific truth itself.
+
+## Coordination
+Refer to GitHub Project `gamma` for tasks and issues.
+
+## Guidelines
+Agents must verify branch/status before work.
+
+## Ignore Rules
+This repository ignores `.DS_Store`, `*.npy`, `*.mat`, and `*.html`.
+
+---
+
 "Protocol is not truth. Protocol defines how truth may be committed."
 
 ## 1. What Gamma Protocol Is

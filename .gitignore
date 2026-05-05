@@ -41,6 +41,11 @@ yarn-error.log*
 .AppleDouble
 .LSOverride
 
+# Gamma Labyrinth Hygiene
+*.npy
+*.mat
+*.html
+
 # Python
 .venv/
 venv/
