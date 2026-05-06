@@ -99,3 +99,5 @@ Nothing in this repository constitutes validated biological truth. All scientifi
 ## Coordination
 
 This repository follows the [GAMMA-BUS Coordination Doctrine](GEMINI.md). Agents should refer to `GEMINI.md` for specific instructions and coordination rules.
+
+- [Agent Header/Footer Protocol](doctrine/agent_header_footer_protocol.md)
